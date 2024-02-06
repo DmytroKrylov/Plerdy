@@ -36,7 +36,7 @@ img {
 /*********************************************************** HEADER  */
 
 .header-burger {
-    background-image: url(./img/icon/burger.svg);
+    background-image: url(../img/icon/burger.svg);
     background-repeat: no-repeat;
     background-size: contain;
     width: 22px;
