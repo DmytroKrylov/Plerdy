@@ -1,0 +1,120 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+.body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 14.06px;
+    color: #001E41;
+    min-width: 380px;
+}
+
+.container {
+    padding-inline: 10px;
+}
+
+/*********************************************************** HEADER  */
+
+.header-burger {
+    background-image: url(./img/icon/burger.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 22px;
+    height: 10px;
+    display: block;
+}
+
+.header-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 14px;
+}
+
+/*********************************************************** HEADER  */
+
+.border {
+    border-bottom: 1px #E5E5E5 solid;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/*********************************************************** SECTION  */
+
+.hero {
+    background-color: #E2F2FF;
+    border-radius: 10px;
+}
+
+.hero-wrapper {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-title {
+    font-size: 32px;
+    line-height: 38.4px;
+    letter-spacing: 0.64px;
+}
+
+.hero-paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-paragraph-grey {
+    color: #909090;
+}
+
+.hero-btn {
+    padding: 10px 30px;
+    background-color: #5D78FF;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    max-width: 60%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18.2px;
+    letter-spacing: 0.35px;
+}
+
+.hero-trusted {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.hero-companies {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
