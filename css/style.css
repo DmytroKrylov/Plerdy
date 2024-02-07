@@ -55,6 +55,12 @@ a {
 }
 
 /*********************************************************** HEADER  */
+.header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
 .header-logo  {
     background-image: url(../img/icon/logo.svg);
     background-repeat: no-repeat;
@@ -530,6 +536,7 @@ a {
     position: relative;
     box-shadow: 0 5px 15px rgba(0,0,0,.35);
     cursor: pointer;
+    margin-right: 40px;
 }
 
 .toggle::before {
