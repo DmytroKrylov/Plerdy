@@ -30,8 +30,27 @@ li {
     padding-inline: 10px;
 }
 
-/*********************************************************** HEADER  */
+@media screen and (min-width: 768px) {
+    .container {
+        padding-inline: 50px;
+    }
+}
 
+@media screen and (min-width: 1440px) {
+    .container {
+        padding-inline: 92px;
+    }
+}
+
+.hover {
+    transition: all .5s;
+}
+
+.hover:hover {
+    transform: scale(1.05);
+}
+
+/*********************************************************** HEADER  */
 .header-burger {
     background-image: url(../img/icon/burger.svg);
     background-repeat: no-repeat;
@@ -47,7 +66,6 @@ li {
     justify-content: space-between;
     padding-block: 14px;
 }
-
 /*********************************************************** HEADER  */
 
 .border {
@@ -58,11 +76,10 @@ li {
 }
 
 /*********************************************************** HERO  */
-
 .hero {
     background-color: #E2F2FF;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .hero-wrapper {
@@ -72,6 +89,20 @@ li {
     align-items: center;
     gap: 20px;
 }
+
+@media screen and (min-width: 768px) {
+    .hero-wrapper {
+       text-align: center;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .hero-wrapper{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+    }
+}
+
 
 .hero-title {
     font-weight: 500;
@@ -91,6 +122,7 @@ li {
 }
 
 .btn {
+    cursor: pointer;
     padding: 10px 30px;
     background-color: #5D78FF;
     color: white;
@@ -100,7 +132,12 @@ li {
     font-size: 14px;
     line-height: 18.2px;
     letter-spacing: 0.35px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.35);
 }
+
+/* .img {
+    width: 100%;
+} */
 
 .hero-trusted {
     display: flex;
@@ -117,19 +154,30 @@ li {
     gap: 20px;
 }
 
-.img {
-    width: 100%;
+.softserv {
+    background-image: url(/img/icon/softserv.svg);
+    width: 91.41px;
+    height: 16.53px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
-
 /*********************************************************** HERO  */
 
-
 /*********************************************************** SECTION  */
+.section {
+    margin-bottom: 30px;
+}
 
 .section-wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .section-wrapper {
+       text-align: center;
+    }
 }
 
 .section-title {
@@ -143,16 +191,20 @@ li {
     color: #001E41;
 }
 
-.btn-bottom {
-    width: 80%;
-    align-self: center;
+.section-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align-last: center;
 }
+/*********************************************************** SECTION  */
 
-  
-
+/*********************************************************** SWIPER  */
 .swiper {
     width: 100%;
     height: 100%;
+    position: static;
   }
   
 
@@ -162,3 +214,17 @@ li {
     height: 100%;
     object-fit: cover;
 }
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+}
+
+.swiper-android .swiper-slide, .swiper-ios .swiper-slide, .swiper-wrapper {
+    margin-bottom: 10px;
+}
+
+.swiper-pagination {
+    position: static;
+} 
+/*********************************************************** SWIPER  */
