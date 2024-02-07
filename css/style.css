@@ -17,11 +17,8 @@ li {
     list-style: none;
 }
 
-img {
-    width: 100%;
-}
-
 .body {
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     line-height: 14.06px;
@@ -60,11 +57,12 @@ img {
     margin-bottom: 10px;
 }
 
-/*********************************************************** SECTION  */
+/*********************************************************** HERO  */
 
 .hero {
     background-color: #E2F2FF;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .hero-wrapper {
@@ -76,6 +74,7 @@ img {
 }
 
 .hero-title {
+    font-weight: 500;
     font-size: 32px;
     line-height: 38.4px;
     letter-spacing: 0.64px;
@@ -91,13 +90,12 @@ img {
     color: #909090;
 }
 
-.hero-btn {
+.btn {
     padding: 10px 30px;
     background-color: #5D78FF;
     color: white;
     border: none;
     border-radius: 7px;
-    max-width: 60%;
     font-weight: 500;
     font-size: 14px;
     line-height: 18.2px;
@@ -117,4 +115,50 @@ img {
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+.img {
+    width: 100%;
+}
+
+/*********************************************************** HERO  */
+
+
+/*********************************************************** SECTION  */
+
+.section-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #909090;
+}
+
+.section-span {
+    color: #001E41;
+}
+
+.btn-bottom {
+    width: 80%;
+    align-self: center;
+}
+
+  
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
