@@ -28,7 +28,7 @@
             </nav>   
             <div class="header-right-content">
                 <a class="header-right-sing hover" href="#">Sing In</a>
-                <button class="btn header-right-btn hover" type="button">Contact sales</button>
+                <button onclick="openModal()" class="btn header-right-btn hover" type="button">Contact sales</button>
             </div>
         </div>
     </header>
@@ -46,7 +46,7 @@
                                 <p class="hero-paragraph hero-paragraph-grey">Thus, you'll compile a list of flaws in your website interface, navigation, and conversion path that can eventually affect its micro and macro conversion rates.</p>    
                             </div>
                             <div class="hero-button">
-                                <button class="btn hover" type="button">Run the Plerdy tool</button>  
+                                <button onclick="openModal()" class="btn hover" type="button">Run the Plerdy tool</button>  
                             </div>
                         </div>   
                         <div class="hero-trusted">
@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="section-bottom">
-                    <button class="btn hover" type="button">Boost my website conversion</button>
+                    <button onclick="openModal()" class="btn hover" type="button">Boost my website conversion</button>
                     <p class="section-paragraph">So, it’s high time for you to stop losing 99% of potential clients due to being unaware of your website users’ behavior patterns and needs.</p>
                 </div>
                      
@@ -95,7 +95,44 @@
 
     </main>
 
-    <!-- <script src="./js/modal.js"></script> -->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()"></span>
+        <div class="modal-text">
+            <h2 class="modal-title">How to do a Website Audit to Improve SEO & Conversions</h2>
+            <p class="modal-paragraph">You will get an SMS with a link to the webinar</p>    
+        </div>
+        <form class="form" id="myForm">
+            <div class="form-flex">
+                <div class="form-margin">
+                    <label class="form-label" for="name">Name:</label>
+                    <input class="form-input hover" type="text" id="name" name="name" placeholder="Boris Johnson" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="phone">Lable:</label>
+                    <span class="form-input-flag"></span>
+                    <span class="form-input-number"></span>
+                    <span class="form-input-drop"></span>
+                    <input class="form-input hover form-input-x" type="text" id="phone" name="phone" pattern="^\+380\s\d{2}\s\d{3}\s\d{4}$" placeholder="XX XXX XXXX" required>
+                </div>    
+            </div>
+            <div class="form-buttons">
+                <button class="form-button btn hover button-disabled" type="submit" disabled>Support</button>
+                <button class="form-button btn hover" type="submit">Contact sales</button>    
+            </div>
+            <div class="form-privat-policy">
+                <input type="checkbox" id="agreement" required>
+                <label for="agreement" class="checkbox-label">By sending up? you agree to our <a class="privat-policy" href="#">Conditions</a> and <a class="privat-policy" href="#">Privacy Policy</a></label>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+    <script src="./js/modal.js"></script>
     <script src="./js/toggle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
