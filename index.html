@@ -16,13 +16,25 @@
 
     <header class="header container">
         <div class="header-link">
-            <a class="hover" href="#"><img src="img/icon/logo.svg" alt="logo" width="89" height="21"></a>
-            <a class="header-burger hover" href="#"></a>    
+            <a class="header-logo hover" href="#"></a>
+            <div class="toggle"></div>
+            <a class="header-burger hover" href="#"></a> 
+            <nav class="header-nav">
+                <ul class="haeder-nav-list">
+                    <li class="hover"><a class="header-nav-link" href="">Pricing</a></li>
+                    <li class="hover"><a class="header-nav-link" href="">Use Cases</a></li>
+                    <li class="hover"><a class="header-nav-link" href="">Book a Demo</a></li>
+                </ul>
+            </nav>   
+            <div class="header-right-content">
+                <a class="header-right-sing hover" href="#">Sing In</a>
+                <button class="btn header-right-btn hover" type="button">Contact sales</button>
+            </div>
         </div>
     </header>
     <span class="border"></span>
 
-    <main class="main container">
+    <main class="main container whitejs">
 
         <section class="hero">
             <div class="hero-wrapper">
@@ -80,8 +92,11 @@
                 </div>
 
         </section>
+
     </main>
 
+    <!-- <script src="./js/modal.js"></script> -->
+    <script src="./js/toggle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
 </body>
