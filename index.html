@@ -32,6 +32,7 @@
             </div>
         </div>
     </header>
+
     <span class="border"></span>
 
     <main class="main container whitejs">
@@ -83,23 +84,20 @@
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
-
                 <div class="section-bottom">
                     <button onclick="openModal()" class="btn hover" type="button">Boost my website conversion</button>
                     <p class="section-paragraph">So, it’s high time for you to stop losing 99% of potential clients due to being unaware of your website users’ behavior patterns and needs.</p>
                 </div>
-                     
                 </div>
-
         </section>
 
     </main>
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
-
+    <div id="myModal" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
+        <img class="modal-img" src="img/modal_img.png" alt="" width="400" height="550">
         <span class="modal-close" onclick="closeModal()"></span>
         <div class="modal-text">
             <h2 class="modal-title">How to do a Website Audit to Improve SEO & Conversions</h2>
@@ -109,18 +107,18 @@
             <div class="form-flex">
                 <div class="form-margin">
                     <label class="form-label" for="name">Name:</label>
-                    <input class="form-input hover" type="text" id="name" name="name" placeholder="Boris Johnson" required>
+                    <input class="form-input hover" type="text" id="name" name="name" pattern="[A-Za-z ]+"  placeholder="Boris Johnson" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="phone">Lable:</label>
                     <span class="form-input-flag"></span>
                     <span class="form-input-number"></span>
                     <span class="form-input-drop"></span>
-                    <input class="form-input hover form-input-x" type="text" id="phone" name="phone" pattern="^\+380\s\d{2}\s\d{3}\s\d{4}$" placeholder="XX XXX XXXX" required>
+                    <input class="form-input hover form-input-x" type="text" id="phone" name="phone" pattern="^\d{9}$" placeholder="XX XXX XXXX" required>
                 </div>    
             </div>
             <div class="form-buttons">
-                <button class="form-button btn hover button-disabled" type="submit" disabled>Support</button>
+                <button class="form-buttonjs button-disabled" type="submit">Support</button>
                 <button class="form-button btn hover" type="submit">Contact sales</button>    
             </div>
             <div class="form-privat-policy">
@@ -128,9 +126,9 @@
                 <label for="agreement" class="checkbox-label">By sending up? you agree to our <a class="privat-policy" href="#">Conditions</a> and <a class="privat-policy" href="#">Privacy Policy</a></label>
             </div>
         </form>
+        <p class="form-bottom">Powered by<a class="prerdy" href="#">Plerdy</a></p>
     </div>
-
-</div>
+    </div>
 
     <script src="./js/modal.js"></script>
     <script src="./js/toggle.js"></script>

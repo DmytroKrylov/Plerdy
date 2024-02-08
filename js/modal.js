@@ -1,11 +1,11 @@
 // Get the modal
-var modal = document.getElementById("myModal");
+const modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.querySelector("button");
+const btn = document.querySelector("button");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+const span = document.getElementsByClassName("modal-close")[0];
 
 // When the user clicks the button, open the modal
 btn.onclick = function() {
@@ -40,3 +40,21 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
     alert("Form submitted!");
     closeModal();
 });
+
+
+
+
+const nameInput = document.getElementById('name');
+const phoneInput = document.getElementById('phone');
+const supportButton = document.querySelector('.button-disabled');
+
+function checkFormCompletion() {
+    if (nameInput.value.trim() !== '' && phoneInput.value.trim() !== '') {
+        supportButton.classList.remove('button-disabled'); 
+    } else {
+        supportButton.classList.add('button-disabled'); 
+    }
+}
+
+nameInput.addEventListener('input', checkFormCompletion);
+phoneInput.addEventListener('input', checkFormCompletion);
