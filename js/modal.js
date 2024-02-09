@@ -38,26 +38,31 @@ function closeModal() {
 document.getElementById("myForm").addEventListener("submit", function(event) {
     event.preventDefault();
     alert("Form submitted!");
-    // closeModal();
+    closeModal();
 });
 
 
-
 function validateForm() {
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
     const agreement = document.getElementById('agreement').checked;
     const supportButton = document.getElementById('supportButton');
 
-    // if (name === '' || phone === '' || !agreement) {
-    //     return false
-    // } 
+    const name = nameInput.value.trim();
+    const phone = phoneInput.value.trim();
+    
+    const namePattern = /[A-Za-z ]+/;
+    const patternPhone = /\d{2} - \d{3} - \d{4}/;
 
-    //     supportButton.classList.remove('button-disabled')
+    const isValidName = namePattern.test(name);
+    const isValidPhone = patternPhone.test(phone);
 
-    // return;
-
-    return name === '' || phone === '' || !agreement
-        ? supportButton.classList.add('button-disabled')
-        : supportButton.classList.remove('button-disabled')
+    if (name !== '' && isValidName && phone !== '' && isValidPhone && agreement) {
+        supportButton.classList.remove('button-disabled')
+    } else {
+        supportButton.classList.add('button-disabled')
+    }  
+    
+    nameInput.addEventListener('input', validateForm);
+    phoneInput.addEventListener('input', validateForm);
 }
