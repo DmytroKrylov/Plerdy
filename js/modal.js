@@ -38,23 +38,26 @@ function closeModal() {
 document.getElementById("myForm").addEventListener("submit", function(event) {
     event.preventDefault();
     alert("Form submitted!");
-    closeModal();
+    // closeModal();
 });
 
 
 
+function validateForm() {
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const agreement = document.getElementById('agreement').checked;
+    const supportButton = document.getElementById('supportButton');
 
-const nameInput = document.getElementById('name');
-const phoneInput = document.getElementById('phone');
-const supportButton = document.querySelector('.button-disabled');
+    // if (name === '' || phone === '' || !agreement) {
+    //     return false
+    // } 
 
-function checkFormCompletion() {
-    if (nameInput.value.trim() !== '' && phoneInput.value.trim() !== '') {
-        supportButton.classList.remove('button-disabled'); 
-    } else {
-        supportButton.classList.add('button-disabled'); 
-    }
+    //     supportButton.classList.remove('button-disabled')
+
+    // return;
+
+    return name === '' || phone === '' || !agreement
+        ? supportButton.classList.add('button-disabled')
+        : supportButton.classList.remove('button-disabled')
 }
-
-nameInput.addEventListener('input', checkFormCompletion);
-phoneInput.addEventListener('input', checkFormCompletion);

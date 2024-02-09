@@ -103,7 +103,7 @@
             <h2 class="modal-title">How to do a Website Audit to Improve SEO & Conversions</h2>
             <p class="modal-paragraph">You will get an SMS with a link to the webinar</p>    
         </div>
-        <form class="form" id="myForm">
+        <form class="form" id="myForm" onchange="validateForm() ">
             <div class="form-flex">
                 <div class="form-margin">
                     <label class="form-label" for="name">Name:</label>
@@ -118,7 +118,7 @@
                 </div>    
             </div>
             <div class="form-buttons">
-                <button class="form-buttonjs button-disabled" type="submit">Support</button>
+                <button id="supportButton" class="form-buttonjs button-disabled" type="submit">Support</button>
                 <button class="form-button btn hover" type="submit">Contact sales</button>    
             </div>
             <div class="form-privat-policy">
